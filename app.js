@@ -22,7 +22,7 @@ app.post("/", function(req, res) {
     var data = {
         members: [
             {email_address: email,
-            user: 'user: 0174bf9f6355238fccc175a215034b04-us4',
+            user: 'user: 0378c0d592e27ab50c41300827733253-us4',
             status: "subscribed",
             merge_fields : {
                 FNAME: firstName,
@@ -37,7 +37,7 @@ app.post("/", function(req, res) {
         url: "https://us4.api.mailchimp.com/3.0/lists/bc3321e782",
         method: "POST",
         headers: {
-            "Authorization": "jamie1 0174bf9f6355238fccc175a215034b04-us4"
+            "Authorization": "jamie1 0378c0d592e27ab50c41300827733253-us4"
         },
         body: jsonData
     };
@@ -49,22 +49,7 @@ app.post("/", function(req, res) {
         else {
             if (response.statusCode == 200) {
                 // successfully hits mailchimp server
-                console.log(response.statusCode);
-                
-                // unless add the below info, the user is not added to mailchimp list for signup.
-                // currently, resort to 'err'... so temporarily sendFILE to portfolio.html given err
-                // needs to be fixed
-                req.login(data.members.user, function(err) {
-                    if (err) {
-                        //res.status(400).send(err);
-                        res.sendFile(__dirname + "/portfolio.html")
-                        console.log("theres an error");
-                    }
-                    else {
-                        res.sendFile(__dirname + "/portfolio.html")
-                        console.log(res.json(data.members.user));
-                    }
-                });
+                res.sendFile(__dirname + "/portfolio.html")
             }
         }
     })
