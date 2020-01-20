@@ -1,0 +1,59 @@
+<link rel="stylesheet" href="css/style.css">
+
+<div class="main">
+        <div class="container">
+            <div class="signup-content">
+                <div class="signup-img">
+                    <img src="images/signup-img.jpg" alt="">
+                </div>
+                <div class="signup-form">
+                    <form method="POST" class="register-form" id="register-form">
+                        <h2>Questionaire</h2>
+                        <div class="form-row">
+                
+                        </div>
+                        <div class="form-group">
+                            <label for="profession">Profession :</label>
+                            <input type="text" name="profession" id="profession"/>
+                        </div>
+               
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="state">Address :</label>
+                                <div class="form-select">
+                                        <input type="text" name="address" id="address"/>
+                                    <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="city">City :</label>
+                                <div class="form-select">
+                                        <input type="text" name="city" id="city"/>
+                                    <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="birth_date">Birthday :</label>
+                            <input type="text" name="birth_date" id="birth_date">
+                        </div>
+                        <div class="form-group">
+                            <label for="pincode">Contact number :</label>
+                            <input type="text" name="pincode" id="pincode">
+                        </div>
+                           
+                        <div >
+                            <a href="/"><button type="submit" class="submit" name="submit" id="submit">Submit</button></a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+
+<%- include("partials/footer") %>
